@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="spApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="spApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="spApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="spApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Web</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="favicon.ico" rel="shortcut icon">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-controller="AppCtrl as ctrl">
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div class="header">
+    <div class="globalwidth clearfix">
+      <span class="languageselect">
+        <ul class="languageselect__list clearfix">
+          <li ng-repeat="lang in ctrl.tabs" class="languageselect__item">
+            <a href="#!/{{lang.lang}}/{{ctrl.getTab(lang.tabs).slug}}" class="languageselect__link clearfix" ng-class="{'languageselect__link--active': lang.lang === ctrl.tabs[ctrl.curr.langNo].lang}">
+              <span class="languageselect-flag languageselect-flag--{{lang.langflag}}"></span>{{lang.langname}}
+            </a>
+          </li>
+        </ul>
+      </span>
+      <nav class="pagenav">
+        <ul class="main-menu clearfix">
+          <li ng-repeat="tab in ctrl.tabs[ctrl.curr.langNo].tabs" class="main-menu__item" ng-class="{'main-menu__item--current': tab.id === ctrl.curr.tabId}"><a class="main-menu__link" href="#!/{{ctrl.tabs[ctrl.curr.langNo].lang}}/{{tab.slug}}">{{tab.name}}</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  
+  <section class="pagebanner">
+    <div class="globalwidth">
+      <h1 class="pagebanner__title"></h1>
+    </div>
+  </section>  
+  <section class="content">
+    <div class="article-wrap globalwidth">
+      <article class="article">
+        <div ng-view tabs="ctrl.tabs" currLangNo="ctrl.currLangNo" currTabId="ctrl.currTabId"></div>
+      </article>
+    </div>
+  </section>
+
+  <footer class="pagefooter">
+    <div class="globalwidth clearfix">
+      <div class="copyright">spApp {{ 'v%VERSION%' | interpolate }} &copy; Jakub Klener (2017), <a email-obfuscate email="--mailto--lumiksro--centrum--cz--"></a></div>
+    </div>
+  </footer>
+
+  <!-- In production use:
+  <script src="https:/ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+  <script src="https:/ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.min.js"></script>
+  <script src="https:/ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-resource.min.js"></script>
+  <script src="https:/ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-animate.min.js"></script>
+  -->
+  <!-- For development use: -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <!-- -->
+  <script src="app.module.js"></script>
+  <script src="app.config.js"></script>
+  <script src="app.controller.js"></script>
+  <script src="core/core.module.js"></script>
+  <script src="core/version/version.module.js"></script>
+  <script src="core/version/version.directive.js"></script>
+  <script src="core/version/version.filter.js"></script>
+  <script src="core/tabs/tabs.module.js"></script>
+  <script src="core/tabs/tabs.service.js"></script>
+  <script src="core/showmore/showmore.module.js"></script>
+  <script src="core/showmore/showmore.directive.js"></script>
+  <script src="core/emailobfuscate/emailobfuscate.module.js"></script>
+  <script src="core/emailobfuscate/emailobfuscate.directive.js"></script>
+  <script src="main/main.module.js"></script>
+  <script src="main/main.config.js"></script>
+  <script src="main/main.component.js"></script>
+  <script src="index/index.module.js"></script>
+  <script src="index/index.config.js"></script>
+  <script src="index/index.component.js"></script>
+
+</body>
+</html>

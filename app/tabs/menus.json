@@ -1,0 +1,102 @@
+[
+    {
+        "lang": "cz",
+        "langname": "Česky",
+        "langflag": "cz",
+        "tabs": [
+            {
+                "id": 1,
+                "name": "Služby",
+                "slug": "sluzby",
+                "url": "tabs/cz/sluzby.html"
+            },
+            {
+                "id": 2,
+                "name": "Ceník",
+                "slug": "cenik",
+                "url": "tabs/cz/cenik.html"
+            },
+            {
+                "id": 3,
+                "name": "Kontakt",
+                "slug": "kontakt",
+                "url": "tabs/cz/kontakt.html"
+            }
+        ]
+    },
+    {
+        "lang": "en",
+        "langname": "English",
+        "langflag": "uk",
+        "tabs": [
+            {
+                "id": 1,
+                "name": "Services",
+                "slug": "services",
+                "url": "tabs/uk/services.html"
+            },
+            {
+                "id": 2,
+                "name": "Pricing",
+                "slug": "pricing",
+                "url": "tabs/uk/pricing.html"
+            },
+            {
+                "id": 3,
+                "name": "Contact",
+                "slug": "contact",
+                "url": "tabs/uk/contact.html"
+            }
+        ]
+    },
+    {
+        "lang": "cn",
+        "langname": "中国",
+        "langflag": "cn",
+        "tabs": [
+            {
+                "id": 1,
+                "name": "服务",
+                "slug": "services",
+                "url": "tabs/uk/services.html"
+            },
+            {
+                "id": 2,
+                "name": "价格表",
+                "slug": "pricing",
+                "url": "tabs/uk/pricing.html"
+            },
+            {
+                "id": 3,
+                "name": "联系",
+                "slug": "contact",
+                "url": "tabs/uk/contact.html"
+            }
+        ]
+    },
+    {
+        "lang": "tw",
+        "langname": "台灣",
+        "langflag": "tw",
+        "tabs": [
+            {
+                "id": 1,
+                "name": "服務",
+                "slug": "services",
+                "url": "tabs/uk/services.html"
+            },
+            {
+                "id": 2,
+                "name": "價格表",
+                "slug": "pricing",
+                "url": "tabs/uk/pricing.html"
+            },
+            {
+                "id": 3,
+                "name": "聯繫",
+                "slug": "contact",
+                "url": "tabs/uk/contact.html"
+            }
+        ]
+    }
+]
